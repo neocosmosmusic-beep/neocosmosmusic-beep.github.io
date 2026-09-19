@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un amor como el de ayer | Novela de Rafael Valdez Curi</title>
+  <meta name="description" content="En la era de las 24 horas, hay historias hechas para durar toda la vida. Consigue la novela digital exclusiva por solo S/ 15.00 soles.">
+  
+  <!-- Tipografías de alta calidad -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #07050c;
+      --bg-card: #120c1f;
+      --pink-neon: #ff2a8d;
+      --purple-neon: #9b51e0;
+      --cyan-neon: #00f0ff;
+      --gold-accent: #f3ba2f;
+      --text-main: #f0f2f5;
+      --text-muted: #9aa0a6;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255, 42, 141, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(155, 81, 224, 0.08) 0%, transparent 40%);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER / BANNER TOP */
+    .top-bar {
+      background: rgba(18, 12, 31, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 42, 141, 0.15);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-tag {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan-neon);
+      font-weight: 600;
+    }
+
+    .price-badge-small {
+      background: rgba(255, 42, 141, 0.15);
+      border: 1px solid var(--pink-neon);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 80px 0 60px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.1;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #ff8cc6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 25px rgba(255, 42, 141, 0.3));
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--cyan-neon);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .book-card-3d {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book-cover-img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 16px;
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(255, 42, 141, 0.3),
+        0 0 80px rgba(155, 81, 224, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .book-cover-img:hover {
+      transform: translateY(-8px) rotate(-1deg) scale(1.02);
+    }
+
+    /* PRICING BLOCK */
+    .price-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 42, 141, 0.25);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .price-box-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .amount {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: var(--font-body);
+    }
+
+    .currency {
+      color: var(--pink-neon);
+      font-size: 1.8rem;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    .guarantee-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .guarantee-list li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .guarantee-list li::before {
+      content: "✓";
+      color: var(--cyan-neon);
+      font-weight: bold;
+    }
+
+    /* BOTONES CTAs */
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 18px 36px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+      transition: all 0.3s ease;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+      background: linear-gradient(135deg, #28e06f 0%, #14a090 100%);
+    }
+
+    /* SECCIÓN REVIEWS / HIGHLIGHTS */
+    .quote-section {
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 48px;
+      margin: 60px 0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .quote-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      line-height: 1.8;
+      color: #e2e8f0;
+      border-left: 4px solid var(--pink-neon);
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .quote-author {
+      font-size: 0.95rem;
+      color: var(--cyan-neon);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      padding-left: 28px;
+    }
+
+    /* GRID CAPÍTULOS */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .chapter-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .chapter-card:hover {
+      background: rgba(255, 42, 141, 0.05);
+      border-color: rgba(255, 42, 141, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .chapter-num {
+      color: var(--pink-neon);
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: rgba(255, 42, 141, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .chapter-name {
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25d366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+      z-index: 999;
+      text-decoration: none;
+      font-size: 32px;
+      transition: transform 0.3s ease;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR STICKY -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span class="brand-tag">Neocosmos Music & Editorial</span>
+      <span class="price-badge-small">Edición Digital S/ 15.00</span>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">Un Amor Como El De Ayer</h1>
+        <div class="hero-subtitle">Una novela de Rafael Valdez Curi</div>
+        <p class="hero-description">
+          Vivimos sumergidos en la dictadura de las 24 horas. Medimos el valor de un momento por el número de vistas y la validez de nuestras emociones por la rapidez con la que podemos reemplazarlas. 
+          <br><br>
+          <strong>¿Qué sucede cuando un corazón acostumbrado a lo efímero choca contra la paciencia de lo perdurable?</strong>
+        </p>
+
+        <!-- CAJA DE PRECIO Y CHECKOUT -->
+        <div class="price-box">
+          <div class="price-box-header">
+            <span class="currency">S/</span>
+            <span class="amount">15.00</span>
+            <span class="original-price">S/ 35.00</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--cyan-neon);">Entrega inmediata en PDF / EPUB de alta calidad</p>
+
+          <ul class="guarantee-list">
+            <li>Acceso instantáneo a tu teléfono o e-reader</li>
+            <li>Pago rápido y seguro mediante Yape, PLIN o BCP</li>
+            <li>Soporte y atención directa con el equipo editorial</li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/51912408244?text=Hola,%20deseo%20comprar%20la%20edici%C3%B3n%20digital%20de%20'Un%20amor%20como%20el%20de%20ayer'%20por%20S/%2015" class="btn-primary" target="_blank">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Comprar Ahora por WhatsApp
+        </a>
+      </div>
+
+      <!-- PORTADA DEL LIBRO -->
+      <div class="book-card-3d">
+        <img src="portada.jpg" alt="Portada Oficial Un Amor Como El De Ayer" class="book-cover-img">
+      </div>
+    </section>
+
+    <!-- SINOPSIS DESTACADA -->
+    <section class="quote-section">
+      <div class="quote-text">
+        «Esta historia es una invitación a hacer una pausa. A escuchar la estática entre las canciones, a aceptar que las imperfecciones y los rayones no arruinan la música de la vida, sino que le otorgan su verdadera identidad.»
+      </div>
+      <div class="quote-author">— Rafael Valdez Curi (Prólogo de la obra)</div>
+    </section>
+
+    <!-- CAPÍTULOS DE LA NOVELA -->
+    <section>
+      <h2 class="section-title">Estructura de la Obra</h2>
+      <div class="chapters-grid">
+        <div class="chapter-card"><div class="chapter-num">01</div><div class="chapter-name">Cartas que no envié</div></div>
+        <div class="chapter-card"><div class="chapter-num">02</div><div class="chapter-name">Un amor como el de ayer</div></div>
+        <div class="chapter-card"><div class="chapter-num">03</div><div class="chapter-name">Bailar a media luz</div></div>
+        <div class="chapter-card"><div class="chapter-num">04</div><div class="chapter-name">Frecuencia cero</div></div>
+        <div class="chapter-card"><div class="chapter-num">05</div><div class="chapter-name">Promesas de vinilo</div></div>
+        <div class="chapter-card"><div class="chapter-num">06</div><div class="chapter-name">Fotos en blanco y negro</div></div>
+        <div class="chapter-card"><div class="chapter-num">07</div><div class="chapter-name">Cerca del cielo</div></div>
+        <div class="chapter-card"><div class="chapter-num">08</div><div class="chapter-name">Rebobinar</div></div>
+        <div class="chapter-card"><div class="chapter-num">09</div><div class="chapter-name">Siempre tú</div></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rafael Valdez Curi. Sello Discográfico y Editorial: Neocosmos Music.</p>
+      <p style="margin-top: 8px; color: #555;">Edición Exclusivamente Virtual / eBook (PDF / EPUB). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/51912408244?text=Hola,%20deseo%20comprar%20la%20edici%C3%B3n%20digital%20de%20'Un%20amor%20como%20el%20de%20ayer'%20por%20S/%2015" class="float-wa" target="_blank" aria-label="Comprar por WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
